@@ -1,0 +1,4 @@
+Connection string: postgresql://postgres.dbtkcmhklnbxbjydynuu:ShC5t.4zJZyp8$w@aws-0-ap-northeast-1.pooler.supabase.com:5432/postgres
+Host: aws-0-ap-northeast-1.pooler.supabase.com
+User: postgres.dbtkcmhklnbxbjydynuu
+password: ShC5t.4zJZyp8$w
