@@ -6,10 +6,12 @@ const correctButton = document.getElementById("correct-button");
 const incorrectButton = document.getElementById("incorrect-button");
 const numOfCorr = document.getElementById("num-of-corr");
 const numOfIncorr = document.getElementById("num-of-incorr");
-const button = document.getElementByClass("button");
+const button = document.getElementsByClassName("button");
 
 let nOfCorr = 0;
 let nOfIncorr = 0;
+correctButton.disabled = true;
+incorrectButton.disabled = true;
 
 // ボタンがクリックされたときのイベントリスナーを設定
 showAnswerButton.onclick = () => {
@@ -17,15 +19,20 @@ showAnswerButton.onclick = () => {
   answer.style.display = "block";
   // ボタン自体の表示スタイルを"none"に変更して非表示にする
   showAnswerButton.style.display = "none";
+  //buttonを有効化
+  correctButton.disabled = false;
+  incorrectButton.disabled = false;
 };
 
 correctButton.onclick = () => {
   nOfCorr++;
   numOfCorr.innerHTML = nOfCorr;
-  button.disabled = true;
+  correctButton.disabled = true;
+  incorrectButton.disabled = true;
 };
 incorrectButton.onclick = () => {
   nOfIncorr++;
   numOfIncorr.innerHTML = nOfIncorr;
-  button.disabled = true;
+  correctButton.disabled = true;
+  incorrectButton.disabled = true;
 }
