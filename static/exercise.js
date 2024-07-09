@@ -8,6 +8,9 @@ const numOfCorr = document.getElementById("num-of-corr");
 const numOfIncorr = document.getElementById("num-of-incorr");
 const button = document.getElementByClass("button");
 
+let nOfCorr = 0;
+let nOfIncorr = 0;
+
 // ボタンがクリックされたときのイベントリスナーを設定
 showAnswerButton.onclick = () => {
   // 回答要素の表示スタイルを"block"に変更して表示する
@@ -17,14 +20,12 @@ showAnswerButton.onclick = () => {
 };
 
 correctButton.onclick = () => {
-  n = 0;
-  n++;
-  numOfCorr.innerHTML = n;
+  nOfCorr++;
+  numOfCorr.innerHTML = nOfCorr;
   button.disabled = true;
 };
 incorrectButton.onclick = () => {
-  n = 0;
-  n++;
-  numOfIncorr.innerHTML = n;
+  nOfIncorr++;
+  numOfIncorr.innerHTML = nOfIncorr;
   button.disabled = true;
 }
