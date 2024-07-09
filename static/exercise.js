@@ -6,6 +6,7 @@ const correctButton = document.getElementById("correct-button");
 const incorrectButton = document.getElementById("incorrect-button");
 const numOfCorr = document.getElementById("num-of-corr");
 const numOfIncorr = document.getElementById("num-of-incorr");
+const button = document.getElementByClass("button");
 
 // ボタンがクリックされたときのイベントリスナーを設定
 showAnswerButton.onclick = () => {
@@ -19,9 +20,11 @@ correctButton.onclick = () => {
   n = 0;
   n++;
   numOfCorr.innerHTML = n;
+  button.disabled = true;
 };
 incorrectButton.onclick = () => {
   n = 0;
   n++;
   numOfIncorr.innerHTML = n;
+  button.disabled = true;
 }
